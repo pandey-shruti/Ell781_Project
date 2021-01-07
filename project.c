@@ -12,24 +12,20 @@
 
 int main()
 {
-	GRAPH * my_graph;
-	my_graph = make_graph(14);
+
 
 	char * citylist[]={
-				"Delhi",
-				"Narela",
-				"Kashmere Gate",
-				"Shahdara",
-				"Delhi Border",
-				"Panipat",
-				"Ambala",
-				"Chandigarh",
-				"Bilaspur",
-				"Shimla",
-				"Ludhiana",
-				"Palam Pur",
-				"Mandi",
-				"Manali"};
+				"Paschim Vihar",
+				"Ashok Park",
+				"Kirti Nagar",
+				"Rajouri Garden",
+				"Cannaught Place",
+				"AIIMS",
+				"Mayur Vihar",
+				"Dhuala Kuan",
+				"New Delhi",
+				"Shahdara"
+				};
 
 	//int visit[16], path[16];
 	int* p_index;
@@ -40,12 +36,14 @@ int main()
 
 	struct Edge edges[] =
 	    {
-	        { 0, 1,5 }, { 0, 2,2 }, { 1, 4,3 }, { 2, 3,1 },
-	        { 3, 4, 7 }, { 4, 5,2 }, { 5, 6,3 },{ 5, 9,8 },
-			{ 6, 7,2 },{ 6, 10,5 },{ 7, 8,2 },{ 9, 8,2 },
-			{ 8, 12,1 },{ 10, 11,3 },{ 11, 12,2 },{ 12, 13,2 }
+	        { 0, 3,1 }, { 0, 1,2 }, { 1, 2,2 }, { 2, 3,3 },
+	        { 2, 4, 4 }, { 4, 5,3 }, { 4, 6,1 },{ 5, 7,6 },
+			{ 6, 9,7 },{ 7, 8,4 },{ 9, 8,5 },
+
 	    };
 	     int e = sizeof(edges)/sizeof(edges[0]);
+	     GRAPH * my_graph;
+	     my_graph = make_graph(10, e);
 	    create_adjacency(my_graph, edges,e, citylist);
 	print_graph(my_graph);
 	return 0;
