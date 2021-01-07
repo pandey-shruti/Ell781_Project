@@ -2,7 +2,7 @@
  * utils.h
  *
  *  Created on: 29-Dec-2020
- *      Author: monik
+ *      Author: monika
  */
 
 #ifndef UTILS_H_
@@ -37,12 +37,12 @@ typedef struct GRAPH{
     NODE ** adj;
 }GRAPH;
 
-GRAPH * make_graph(int v){  // function to make a new graph with v number of vertices
+GRAPH * make_graph(int v, int e){  // function to make a new graph with v number of vertices
     GRAPH *g;
     g = (GRAPH *) malloc(sizeof(GRAPH));
     g -> vertices = v;
     g -> adj = malloc(v * sizeof(NODE*));
-    for (int i=0; i<v; i++)
+    for (int i=0; i<e; i++)
         g->adj[i] = (NODE*) NULL;
     return g;
 }
@@ -55,13 +55,13 @@ void create_adjacency(GRAPH * g,struct Edge ed[],int e,char **l){  // function t
 	for (int i = 0; i < e; i++){
 		int s =ed[i].src;
 		int n =ed[i].dest;
-		int cost = ed[i].cost;
+	//	int cost = ed[i].cost;
    NODE * v = make_node(n, l );
    v->next = g->adj[s]; //v pointing to itself
     g->adj[s] = v;  //allowed ns added to adj_list of ps
 	}
 }
-void print_graph(GRAPH * g){  // funtion to print the graph
+void print_graph(GRAPH * g){  // function to print the graph
     int i;
     NODE * adj_node;
     for (i=0 ; i < g->vertices ; i++){
