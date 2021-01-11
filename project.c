@@ -1,14 +1,6 @@
-/*
- ============================================================================
- Name        : project.c
- Author      : monika
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
 
-#include"utils_correct.h"
+
+#include"utils_Shruti.h"
 
 int main()
 {
