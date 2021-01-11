@@ -9,6 +9,7 @@
  */
 
 #include"utils.h"
+#include"krus.h"
 
 int main()
 {
@@ -37,8 +38,8 @@ int main()
 	struct Edge edges[] =
 	    {
 	        { 0, 3,1 }, { 0, 1,2 }, { 1, 2,2 }, { 2, 3,3 },
-	        { 2, 4, 4 }, { 4, 5,3 }, { 4, 6,1 },{ 5, 7,6 },
-			{ 6, 9,7 },{ 7, 8,4 },{ 9, 8,5 },
+	        { 2, 4, 4 }, { 4, 5,3 }, { 4, 6,1 }, {8,9,5},{ 5, 7,2},{4,8,2},{ 8, 7,5 },
+			{ 6, 9,7 },{ 9, 8,5 }
 
 	    };
 	     int e = sizeof(edges)/sizeof(edges[0]);
@@ -46,6 +47,7 @@ int main()
 	     my_graph = make_graph(10, e);
 	    create_adjacency(my_graph, edges,e, citylist);
 	print_graph(my_graph);
+	KruskalMST(my_graph,e,edges);
 	return 0;
 
 }
