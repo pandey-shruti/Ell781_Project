@@ -88,7 +88,7 @@ void prims_array(GRAPH *g) {
   int V = g->vertices;  
   NODE ** adj = g->adj;
 
-  int setS[20]={false}; // An array to store the whether a vertex is in MST
+  int setS[20]={false}; // An array to store whether a vertex is in MST or not
   
   setS[0] = true; // start with the 0th vertex
 
@@ -115,7 +115,7 @@ void prims_array(GRAPH *g) {
           if (!setS[j]) // check for the edges across the cut
           {
             int price = adjacent->weight;
-            printf("The cost of edge from vertex %d in set S to vertex %d in V-S is %d\n",i,j,price); 
+            //printf("The cost of edge from vertex %d in set S to vertex %d in V-S is %d\n",i,j,price); 
             if (min > price) {
               
               min = price;
@@ -128,12 +128,13 @@ void prims_array(GRAPH *g) {
       }
     }
     
-    printf("The minimum weight edge (light/safe edge) included in MST is %d -> %d having cost of %d\n", x, y, min);
+    //printf("The minimum weight edge (light/safe edge) included in MST is %d -> %d having cost of %d\n", x, y, min);
+    printf("%d -> %d,cost = %d",x, y, min);
     minimum_cost += min;
     printf("\n");
     setS[y] = true; //include vertex y in S
     edges++;
   }
-  printf("The cost of the Minimum Spanning Tree obtained is %d",minimum_cost);
+  printf("The cost of the Minimum Spanning Tree obtained is %d\n",minimum_cost);
   return ;
 }
