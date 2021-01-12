@@ -7,8 +7,19 @@
 
 #ifndef KRUS_H_
 #define KRUS_H_
-
-
+#include <time.h>
+#include <unistd.h>
+void fun()
+{
+    printf("fun() starts \n");
+    printf("Press enter to stop fun \n");
+    while(1)
+    {
+        if (getchar())
+            break;
+    }
+    printf("fun() ends \n");
+}
 struct subset {
     int parent;
     int rank;
@@ -52,6 +63,9 @@ int myComp(const void* a, const void* b)
 }
 void KruskalMST(struct GRAPH* graph, int ed, struct Edge edge[])
 {
+	clock_t start ,end;
+	start =clock();
+	double cpu_time_used= 0.0;
     int V = graph->vertices;
     struct Edge result[V]; // Tnis will store the resultant MST
     int e = 0; // An index variable, used for result[]
@@ -104,6 +118,14 @@ void KruskalMST(struct GRAPH* graph, int ed, struct Edge edge[])
         minimumCost += result[i].cost;
     }
     printf("Minimum Cost Spanning tree : %d",minimumCost);
+    //fun();
+    //sleep(3);
+    end =clock();
+
+    //cpu_time_used = end - start;
+   cpu_time_used += (double)(end - start)/ CLOCKS_PER_SEC;
+    printf("\n Time taken by Kruskal Algorithm to solve TSP is %lf",cpu_time_used );
+   // time
     return;
 }
 
