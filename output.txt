@@ -7,25 +7,25 @@ adjacency list of vertex Ashok Park (vertex no.= 1)
 Kirti Nagar (vertex no.= 2, cost = 2)---> Paschim Vihar (vertex no.= 0, cost = 2)---> 
 
 adjacency list of vertex Kirti Nagar (vertex no.= 2)
-Cannaught Place (vertex no.= 4, cost = 4)---> Rajouri Garden (vertex no.= 3, cost = 3)---> Ashok Park (vertex no.= 1, cost = 2)---> 
+Cannaught Place (vertex no.= 4, cost = 4)---> Rajouri Garden (vertex no.= 3, cost = 1)---> Ashok Park (vertex no.= 1, cost = 2)---> 
 
 adjacency list of vertex Rajouri Garden (vertex no.= 3)
-Kirti Nagar (vertex no.= 2, cost = 3)---> Paschim Vihar (vertex no.= 0, cost = 1)---> 
+Kirti Nagar (vertex no.= 2, cost = 1)---> Paschim Vihar (vertex no.= 0, cost = 1)---> 
 
 adjacency list of vertex Cannaught Place (vertex no.= 4)
 New Delhi (vertex no.= 8, cost = 2)---> Mayur Vihar (vertex no.= 6, cost = 1)---> AIIMS (vertex no.= 5, cost = 3)---> Kirti Nagar (vertex no.= 2, cost = 4)---> 
 
 adjacency list of vertex AIIMS (vertex no.= 5)
-Dhuala Kuan (vertex no.= 7, cost = 6)---> Cannaught Place (vertex no.= 4, cost = 3)---> 
+Dhuala Kuan (vertex no.= 7, cost = 2)---> Cannaught Place (vertex no.= 4, cost = 3)---> 
 
 adjacency list of vertex Mayur Vihar (vertex no.= 6)
 Shahdara (vertex no.= 9, cost = 7)---> Cannaught Place (vertex no.= 4, cost = 1)---> 
 
 adjacency list of vertex Dhuala Kuan (vertex no.= 7)
-New Delhi (vertex no.= 8, cost = 4)---> AIIMS (vertex no.= 5, cost = 6)---> 
+New Delhi (vertex no.= 8, cost = 5)---> AIIMS (vertex no.= 5, cost = 2)---> 
 
 adjacency list of vertex New Delhi (vertex no.= 8)
-Shahdara (vertex no.= 9, cost = 5)---> Cannaught Place (vertex no.= 4, cost = 2)---> Dhuala Kuan (vertex no.= 7, cost = 4)---> 
+Shahdara (vertex no.= 9, cost = 5)---> Cannaught Place (vertex no.= 4, cost = 2)---> Dhuala Kuan (vertex no.= 7, cost = 5)---> 
 
 adjacency list of vertex Shahdara (vertex no.= 9)
 New Delhi (vertex no.= 8, cost = 5)---> Mayur Vihar (vertex no.= 6, cost = 7)---> 
@@ -35,12 +35,13 @@ The cost of edge from vertex 0 in set S to vertex 3 in V-S is 1
 The minimum weight edge (light/safe edge) included in MST is 0 -> 3 having cost of 1
 
 The cost of edge from vertex 0 in set S to vertex 1 in V-S is 2
-The cost of edge from vertex 3 in set S to vertex 2 in V-S is 3
-The minimum weight edge (light/safe edge) included in MST is 0 -> 1 having cost of 2
+The cost of edge from vertex 3 in set S to vertex 2 in V-S is 1
+The minimum weight edge (light/safe edge) included in MST is 3 -> 2 having cost of 1
 
-The cost of edge from vertex 1 in set S to vertex 2 in V-S is 2
-The cost of edge from vertex 3 in set S to vertex 2 in V-S is 3
-The minimum weight edge (light/safe edge) included in MST is 1 -> 2 having cost of 2
+The cost of edge from vertex 0 in set S to vertex 1 in V-S is 2
+The cost of edge from vertex 2 in set S to vertex 4 in V-S is 4
+The cost of edge from vertex 2 in set S to vertex 1 in V-S is 2
+The minimum weight edge (light/safe edge) included in MST is 0 -> 1 having cost of 2
 
 The cost of edge from vertex 2 in set S to vertex 4 in V-S is 4
 The minimum weight edge (light/safe edge) included in MST is 2 -> 4 having cost of 4
@@ -58,17 +59,17 @@ The minimum weight edge (light/safe edge) included in MST is 4 -> 8 having cost 
 The cost of edge from vertex 4 in set S to vertex 5 in V-S is 3
 The cost of edge from vertex 6 in set S to vertex 9 in V-S is 7
 The cost of edge from vertex 8 in set S to vertex 9 in V-S is 5
-The cost of edge from vertex 8 in set S to vertex 7 in V-S is 4
+The cost of edge from vertex 8 in set S to vertex 7 in V-S is 5
 The minimum weight edge (light/safe edge) included in MST is 4 -> 5 having cost of 3
 
-The cost of edge from vertex 5 in set S to vertex 7 in V-S is 6
+The cost of edge from vertex 5 in set S to vertex 7 in V-S is 2
 The cost of edge from vertex 6 in set S to vertex 9 in V-S is 7
 The cost of edge from vertex 8 in set S to vertex 9 in V-S is 5
-The cost of edge from vertex 8 in set S to vertex 7 in V-S is 4
-The minimum weight edge (light/safe edge) included in MST is 8 -> 7 having cost of 4
+The cost of edge from vertex 8 in set S to vertex 7 in V-S is 5
+The minimum weight edge (light/safe edge) included in MST is 5 -> 7 having cost of 2
 
 The cost of edge from vertex 6 in set S to vertex 9 in V-S is 7
 The cost of edge from vertex 8 in set S to vertex 9 in V-S is 5
 The minimum weight edge (light/safe edge) included in MST is 8 -> 9 having cost of 5
 
-The cost of the Minimum Spanning Tree obtained is 24
+The cost of the Minimum Spanning Tree obtained is 21
